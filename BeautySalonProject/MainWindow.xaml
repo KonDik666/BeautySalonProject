@@ -1,0 +1,33 @@
+﻿<Window x:Class="BeautySalonProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BeautySalonProject"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+
+
+        <Image  Margin="5"/>
+        <TextBlock Text="{Binding ElementName=MainFrame, Path=Content.Title}"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="Back_Button"  Opacity="0.8"  Content="Назад"></Button>
+            <Button x:Name="LogOutButton" Click="LogOutButton_Click" Opacity="0.8" Content="Вoйти" ></Button>
+        </StackPanel>
+
+        <Frame Grid.Row="1" NavigationUIVisibility="Hidden" x:Name="MainFrame" />
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Ellipse Width="5" Height="5"></Ellipse>
+            <TextBlock  x:Name="ErrorTextBlock" VerticalAlignment="Center">Статус: Не авторизован</TextBlock>
+        </StackPanel>
+    </Grid>
+
+</Window>
+    
