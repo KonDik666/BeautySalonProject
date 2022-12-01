@@ -1,4 +1,5 @@
-﻿using BeautySalonProject.Views.Pages;
+﻿using BeautySalonProject.Models;
+using BeautySalonProject.Views.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,11 +26,21 @@ namespace BeautySalonProject
         {
             InitializeComponent();
             MainFrame.Navigate(new StartPage());
+            
         }
 
         private void LogOutButton_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new StartPage());
         }
+
+        private void Back_Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainFrame.CanGoBack)
+            {
+                MainFrame.GoBack();
+            }
+        }
+        
     }
 }

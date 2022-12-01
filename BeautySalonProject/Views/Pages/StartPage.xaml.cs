@@ -33,9 +33,13 @@ namespace BeautySalonProject.Views.Pages
             {
                 MessageBox.Show("Поле логина или пароля пусто");
             }
-            UsersController obj = new UsersController();
-            bool v = obj.Auth(LoginTextBox.Text, PasswordPasswordBox.Password);
-            if (v == true)
+          
+            if (UsersController.Auth(LoginTextBox.Text,PasswordPasswordBox.Password))
+            {
+                this.NavigationService.Navigate(new CategoriesPage());
+                
+            }
+            else
             {
                 this.NavigationService.Navigate(new RegistrationPage());
             }

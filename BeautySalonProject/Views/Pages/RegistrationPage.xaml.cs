@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BeautySalonProject.Controllers;
+using BeautySalonProject.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,23 @@ namespace BeautySalonProject.Views.Pages
         public RegistrationPage()
         {
             InitializeComponent();
+        }
+
+        private void RegistrationButton_Click(object sender, RoutedEventArgs e)
+        {
+            Users newUser = new Users
+            {
+                idRole = 2,
+                userName = NameTextBox.Text,
+                userLastName = LastNameTextBox.Text,
+                userOtherName = LastNameTextBox.Text,
+                userLogin = LoginTextBox.Text,
+                userPassword = PasswordPasswordBox.Password
+            };
+            if (UsersController.AddUser(newUser))
+            {
+                MessageBox.Show("запись добавлена");
+            }
         }
     }
 }

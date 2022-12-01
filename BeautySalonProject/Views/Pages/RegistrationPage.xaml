@@ -11,8 +11,8 @@
     <Grid>
         <Grid>
             <DockPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                <StackPanel Width="200" VerticalAlignment="Center">
-                    <TextBlock Style="{StaticResource HeaderTextBlock}">Регистрация</TextBlock>
+                <StackPanel Width="301" VerticalAlignment="Center">
+                    <TextBlock >Регистрация</TextBlock>
                     <TextBlock>Имя:</TextBlock>
                     <TextBox x:Name="NameTextBox"></TextBox>
                     <TextBlock>Фамилия:</TextBlock>
@@ -25,9 +25,9 @@
                     <PasswordBox x:Name="PasswordPasswordBox"></PasswordBox>
                     <TextBlock>Повторите пароль:</TextBlock>
                     <PasswordBox x:Name="RepeatPasswordPasswordBox"></PasswordBox>
-                    <Button x:Name="RegistrationButton" >Зарегистрироваться</Button>
+                    <Button x:Name="RegistrationButton" Click="RegistrationButton_Click" >Зарегистрироваться</Button>
                 </StackPanel>
-                <StackPanel Style="{StaticResource StackPanelCaptha}" >
+                <StackPanel >
                     <TextBlock>Введите символы с картинки:</TextBlock>
 
                     <StackPanel x:Name="CapchaStackPanel" Orientation="Horizontal" HorizontalAlignment="Center"></StackPanel>

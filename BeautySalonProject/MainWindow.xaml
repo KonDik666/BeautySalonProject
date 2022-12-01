@@ -18,7 +18,7 @@
         <Image  Margin="5"/>
         <TextBlock Text="{Binding ElementName=MainFrame, Path=Content.Title}"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button x:Name="Back_Button"  Opacity="0.8"  Content="Назад"></Button>
+            <Button x:Name="Back_Button" Click="Back_Button_Click" Opacity="0.8"  Content="Назад"></Button>
             <Button x:Name="LogOutButton" Click="LogOutButton_Click" Opacity="0.8" Content="Вoйти" ></Button>
         </StackPanel>
 
