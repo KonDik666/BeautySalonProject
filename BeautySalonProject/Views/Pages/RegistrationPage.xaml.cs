@@ -38,10 +38,18 @@ namespace BeautySalonProject.Views.Pages
                 userLogin = LoginTextBox.Text,
                 userPassword = PasswordPasswordBox.Password
             };
-            if (UsersController.AddUser(newUser))
+            if(NameTextBox.Text=="" || LastNameTextBox.Text=="" || LastNameTextBox.Text=="" || LoginTextBox.Text=="" || PasswordPasswordBox.Password == "")
             {
-                MessageBox.Show("запись добавлена");
+                MessageBox.Show("заполните все поля");
             }
+            else
+            {
+                if (UsersController.AddUser(newUser))
+                {
+                    MessageBox.Show("запись добавлена");
+                }
+            }
+           
         }
     }
 }
