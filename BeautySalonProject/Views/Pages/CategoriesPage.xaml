@@ -8,48 +8,47 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="CategoriesPage">
 
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+       
         <TextBlock x:Name="Title_TextBlock"></TextBlock>
-        <ListView x:Name="ServiceList_View" Grid.Row="1" VerticalAlignment="Center">
+        <ListView x:Name="ServiceListView" Grid.Row="1" VerticalAlignment="Center">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
+                        <Image Source="{Binding Path=GetServiceCategoryes}"></Image>
 
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Grid HorizontalAlignment="Right" Grid.RowSpan="2"  Width="0" >
+        <Grid HorizontalAlignment="Right"  Grid.RowSpan="2"  Width="0" >
             <Grid.RowDefinitions>
-                <RowDefinition ></RowDefinition>
-                <RowDefinition ></RowDefinition>
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition ></RowDefinition>
-                <RowDefinition ></RowDefinition>
-                <RowDefinition ></RowDefinition>
-                <RowDefinition ></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="5*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
             </Grid.RowDefinitions>
             <TextBlock >Запись</TextBlock>
-            <Calendar x:Name="CalendarRecord"  Grid.Row="1" Grid.RowSpan="4" >
+            <Calendar x:Name="CalendarRecord"  Grid.Row="1" >
             </Calendar>
-            <DockPanel Grid.Row="5">
+            <DockPanel Grid.Row="2">
                 <TextBlock FontSize="15" >Дата:</TextBlock>
                 <TextBox x:Name="EnterDate_TextBox"  IsReadOnly="True" ></TextBox>
             </DockPanel>
-            <DockPanel Grid.Row="6">
+            <DockPanel Grid.Row="3">
                 <TextBlock FontSize="15">Время:</TextBlock>
                 <TextBox x:Name="EnterTime_TextBox" ></TextBox>
             </DockPanel>
-            <Button x:Name="Record_Button" Grid.Row="7"  Foreground="White"   Content="Записать"></Button>
-            <Button x:Name="Record_Close"  Grid.Row="8"  Foreground="Black" Background="Gray" Content="Закрыть"  ></Button>
+            <Button x:Name="Record_Button" Grid.Row="4" Foreground="White"   Content="Записать"></Button>
+            <Button x:Name="Record_Close"  Grid.Row="5" Foreground="Black" Background="Gray" Content="Закрыть" ></Button>
         </Grid>
-
-
     </Grid>
 </Page>
+

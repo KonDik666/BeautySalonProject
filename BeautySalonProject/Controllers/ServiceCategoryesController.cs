@@ -15,7 +15,7 @@ namespace BeautySalonProject.Controllers
         /// вывод категорий из бд
         /// </summary>
         /// <returns></returns>
-        public List<ServiceCategoryes> GetServiceCategoryes()
+        public static List<ServiceCategoryes> GetServiceCategoryes()
 
         {
 

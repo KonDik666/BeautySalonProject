@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BeautySalonProject.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace BeautySalonProject.Views.Pages
         public CategoriesPage()
         {
             InitializeComponent();
+            ServiceListView.ItemsSource = ServiceCategoryesController.GetServiceCategoryes();
         }
     }
 }
