@@ -20,7 +20,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
-                        <Image Source="{Binding Path=GetServiceCategoryes}"></Image>
+                        <Image Source="{Binding CategoryImage}"></Image>
 
                     </Grid>
                 </DataTemplate>
