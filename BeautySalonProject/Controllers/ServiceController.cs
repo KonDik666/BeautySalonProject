@@ -29,5 +29,21 @@ namespace BeautySalonProject.Controllers
             }
 
         }
+
+        public static List<Services> GetManServices()
+
+        {
+
+            using (HttpClient client = new HttpClient())
+            {
+                HttpResponseMessage response = client.GetAsync($"{Manager.RootUrl}Services").Result;
+                var content = response.Content.ReadAsStringAsync();
+                var answer = JsonConvert.DeserializeObject<List<Services>>(content.Result);
+                return answer.FirstOrDefault(x => x.categoryId=);
+
+            }
+
+        }
+
     }
 }
