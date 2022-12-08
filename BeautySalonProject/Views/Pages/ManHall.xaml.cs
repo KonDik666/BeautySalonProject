@@ -17,19 +17,15 @@ using System.Windows.Shapes;
 namespace BeautySalonProject.Views.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для CategoriesPage.xaml
+    /// Логика взаимодействия для ManHall.xaml
     /// </summary>
-    public partial class CategoriesPage : Page
+    public partial class ManHall : Page
     {
-        public CategoriesPage()
+        public ManHall()
         {
             InitializeComponent();
-            ServiceListView.ItemsSource = ServiceCategoryesController.GetServiceCategoryes();
-        }
-
-        private void TextBlock_PreviewMouseDown(object sender, MouseButtonEventArgs e)
-        {
-            this.NavigationService.Navigate(new ManHall());
+            
+            ServicesListView.ItemsSource = ServiceController.GetServices();
         }
     }
 }

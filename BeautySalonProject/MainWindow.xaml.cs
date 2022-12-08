@@ -26,6 +26,10 @@ namespace BeautySalonProject
         {
             InitializeComponent();
             MainFrame.Navigate(new StartPage());
+            //if (MainFrame.CurrentSource)
+            //{
+            //    ErrorTextBlock.Text = "Статус: авторизован";
+            //}
             
         }
 
@@ -39,6 +43,7 @@ namespace BeautySalonProject
             if (MainFrame.CanGoBack)
             {
                 MainFrame.GoBack();
+                ErrorTextBlock.Text = "Статус: не авторизован";
             }
         }
         
