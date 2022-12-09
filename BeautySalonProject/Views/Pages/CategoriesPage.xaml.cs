@@ -1,4 +1,5 @@
 ﻿using BeautySalonProject.Controllers;
+using BeautySalonProject.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,9 @@ namespace BeautySalonProject.Views.Pages
 
         private void TextBlock_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-            this.NavigationService.Navigate(new ManHall());
+            Grid activeElement = sender as Grid;
+            ServiceCategoryes activeCategory = activeElement.DataContext as ServiceCategoryes;
+            this.NavigationService.Navigate(new ManHall(activeCategory));
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using BeautySalonProject.Controllers;
+using BeautySalonProject.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,11 +22,12 @@ namespace BeautySalonProject.Views.Pages
     /// </summary>
     public partial class ManHall : Page
     {
-        public ManHall()
+        public ManHall(ServiceCategoryes activeCategory)
         {
             InitializeComponent();
-            
-            ServicesListView.ItemsSource = ServiceController.GetServices();
+            ServicesListView.ItemsSource = ServiceController.GetServicesCategories(activeCategory.CategoryId);
+            TitleTextBlock.Text = activeCategory.CategoryTitle;
+           
         }
     }
 }

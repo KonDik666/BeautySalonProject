@@ -30,16 +30,16 @@ namespace BeautySalonProject.Controllers
 
         }
 
-        public static List<Services> GetManServices()
+        public static List<Services> GetServicesCategories(int categoryId)
 
         {
 
             using (HttpClient client = new HttpClient())
             {
-                HttpResponseMessage response = client.GetAsync($"{Manager.RootUrl}Services").Result;
+                HttpResponseMessage response = client.GetAsync($"{Manager.RootUrl}Services/Categories/{categoryId}").Result;
                 var content = response.Content.ReadAsStringAsync();
                 var answer = JsonConvert.DeserializeObject<List<Services>>(content.Result);
-                return answer.FirstOrDefault(x => x.categoryId=);
+                return answer;
 
             }
 

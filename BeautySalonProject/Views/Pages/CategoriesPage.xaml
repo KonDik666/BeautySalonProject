@@ -19,9 +19,9 @@
         <ListView x:Name="ServiceListView" Grid.Row="1" VerticalAlignment="Center">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid>
+                    <Grid PreviewMouseDown="TextBlock_PreviewMouseDown">
                         <Image Source="{Binding CategoryImage}" Height="200"></Image>
-                        <TextBlock Text="{Binding CategoryTitle}" Foreground="White" PreviewMouseDown="TextBlock_PreviewMouseDown"></TextBlock>
+                        <TextBlock Text="{Binding CategoryTitle}" Foreground="White"></TextBlock>
 
                     </Grid>
                 </DataTemplate>

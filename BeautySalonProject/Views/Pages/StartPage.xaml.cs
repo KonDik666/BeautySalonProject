@@ -38,6 +38,7 @@ namespace BeautySalonProject.Views.Pages
             {
                 this.NavigationService.Navigate(new CategoriesPage());
                 
+                
             }
             else
             {

@@ -26,16 +26,17 @@ namespace BeautySalonProject
         {
             InitializeComponent();
             MainFrame.Navigate(new StartPage());
-            //if (MainFrame.CurrentSource)
-            //{
-            //    ErrorTextBlock.Text = "Статус: авторизован";
-            //}
-            
+            if (MainFrame.CanGoBack)
+            {
+                ErrorTextBlock.Text = "Статус: авторизован";
+            }
+
         }
 
         private void LogOutButton_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new StartPage());
+            ErrorTextBlock.Text = "Статус: не авторизован";
         }
 
         private void Back_Button_Click(object sender, RoutedEventArgs e)
@@ -43,7 +44,7 @@ namespace BeautySalonProject
             if (MainFrame.CanGoBack)
             {
                 MainFrame.GoBack();
-                ErrorTextBlock.Text = "Статус: не авторизован";
+                
             }
         }
         
