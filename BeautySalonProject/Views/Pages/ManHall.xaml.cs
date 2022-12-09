@@ -24,9 +24,11 @@ namespace BeautySalonProject.Views.Pages
     {
         public ManHall(ServiceCategoryes activeCategory)
         {
+            //int discountSale = ServiceController.GetServicesCategories(activeCategory.CategoryId);
             InitializeComponent();
             ServicesListView.ItemsSource = ServiceController.GetServicesCategories(activeCategory.CategoryId);
             TitleTextBlock.Text = activeCategory.CategoryTitle;
+            
            
         }
     }

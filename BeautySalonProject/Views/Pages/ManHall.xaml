@@ -25,11 +25,15 @@
                         </Grid.ColumnDefinitions>
                         <Image Source="{Binding CategoryImage}" Height="200"></Image>
                         <TextBlock Text="{Binding title}" Margin="0,0,40,0"></TextBlock>
-                        <TextBlock Text="{Binding cost}" Grid.Column="1" Foreground="Red"></TextBlock>
+                        <TextBlock Text="{Binding cost}" Grid.Column="1" Margin="0,0,100,0" TextDecorations="Strikethrough" ></TextBlock>
+                        <TextBlock Text="{Binding sale}" Visibility="{Binding VisibilityBlock}" Grid.Column="1" Foreground="Red"></TextBlock>
+                        <Image Source="{Binding mainImagePath}" Width="100" Height="100"></Image>
                     </Grid>
+                    
                 </DataTemplate>
             </ListView.ItemTemplate>
            
         </ListView>
+        
     </Grid>
 </Page>

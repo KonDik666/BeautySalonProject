@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace BeautySalonProject.Models
 {
@@ -20,7 +21,48 @@ namespace BeautySalonProject.Models
             public object category { get; set; }
             public object[] clientServices { get; set; }
             public object[] servicePhotos { get; set; }
-    
+
+           
+            public float sale
+            {
+           
+
+            get
+            {
+                if (discount==0.0)
+                {
+                    return 0;
+                }
+                else
+                {
+                    return cost - cost / 100 * discount;
+                }
+                    
+               
+            }
+
+
+        }
+
+        public Visibility VisibilityBlock
+        {
+            get
+            {
+                if (sale == 0)
+                {
+                    return Visibility.Hidden;
+                }
+                else
+                {
+                    return Visibility.Visible;
+                }
+
+            }
+           
+        }
+
+
+
 
     }
 }

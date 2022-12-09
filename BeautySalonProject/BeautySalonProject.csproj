@@ -139,5 +139,43 @@
   <ItemGroup>
     <Resource Include="Assets\Images\man.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\Pages\Img\Services\122454.png" />
+    <Resource Include="Views\Pages\Img\Services\96.png" />
+    <Resource Include="Views\Pages\Img\Services\face.png" />
+    <Resource Include="Views\Pages\Img\Services\makeup.jpg" />
+    <Resource Include="Views\Pages\Img\Services\man.png" />
+    <Resource Include="Views\Pages\Img\Services\mask.jpeg" />
+    <Resource Include="Views\Pages\Img\Services\piling.jpg" />
+    <Resource Include="Views\Pages\Img\Services\soliarij.jpg" />
+    <Resource Include="Views\Pages\Img\Services\брови.png" />
+    <Resource Include="Views\Pages\Img\Services\Гречишный массаж.jpg" />
+    <Resource Include="Views\Pages\Img\Services\Декорирование нарощенных ресниц стразами.jpg" />
+    <Resource Include="Views\Pages\Img\Services\Демакияж.jpg" />
+    <Resource Include="Views\Pages\Img\Services\Депиляция воском.jpg" />
+    <Resource Include="Views\Pages\Img\Services\Европейский маникюр.jpg" />
+    <Resource Include="Views\Pages\Img\Services\ИК-сауна.jpg" />
+    <Resource Include="Views\Pages\Img\Services\Классический маникюр.png" />
+    <Resource Include="Views\Pages\Img\Services\Комбинированный маникюр.jpg" />
+    <Resource Include="Views\Pages\Img\Services\Контурная пластика.jpg" />
+    <Resource Include="Views\Pages\Img\Services\массаж.jpg" />
+    <Resource Include="Views\Pages\Img\Services\Мезотерапия.jpg" />
+    <Resource Include="Views\Pages\Img\Services\Моделирование ресниц.jpg" />
+    <Resource Include="Views\Pages\Img\Services\ногти.png" />
+    <Resource Include="Views\Pages\Img\Services\Окрашивание бровей.jpg" />
+    <Resource Include="Views\Pages\Img\Services\Парафинотерапия.jpg" />
+    <Resource Include="Views\Pages\Img\Services\Покрытие ногтей гель-лаком.jpg" />
+    <Resource Include="Views\Pages\Img\Services\Полировка ногтей.jpg" />
+    <Resource Include="Views\Pages\Img\Services\Прессотерапия.jpg" />
+    <Resource Include="Views\Pages\Img\Services\Прокол ушей пистолетом.png" />
+    <Resource Include="Views\Pages\Img\Services\Ресницы.png" />
+    <Resource Include="Views\Pages\Img\Services\Снятие ресниц.jpg" />
+    <Resource Include="Views\Pages\Img\Services\Стоун-терапия.jpg" />
+    <Resource Include="Views\Pages\Img\Services\стрижка.png" />
+    <Resource Include="Views\Pages\Img\Services\Укрепление ногтей гелем.jpg" />
+    <Resource Include="Views\Pages\Img\Services\Шугаринг.jpg" />
+    <Resource Include="Views\Pages\Img\Services\Экспресс SPA.png" />
+    <Resource Include="Views\Pages\Img\Services\Экспресс-педикюр.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
